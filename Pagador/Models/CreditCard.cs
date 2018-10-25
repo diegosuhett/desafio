@@ -13,7 +13,7 @@ namespace Pagador.Models
         public string CardNumber { get; set; }
 
         [StringLength(25)]
-        [Display(Name = "Nome impresso no cartão")]
+        [Display(Name = "Nome no cartão")]
         [Required(ErrorMessage = "Campo obrigatório")]
         public string Holder { get; set; }
 

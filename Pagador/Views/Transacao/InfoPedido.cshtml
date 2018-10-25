@@ -1,7 +1,7 @@
 ﻿@model Pagador.Models.Pedido
 
 @{
-    ViewData["Title"] = "InfoPedido1";
+    ViewData["Title"] = "Consulta";
 }
 
 <h2>Número do Pedido: @Html.DisplayFor(model => model.Payment.PaymentId)</h2>
@@ -13,61 +13,61 @@
             @Html.DisplayNameFor(model => model.Customer.Name)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Customer.Name)
+            @Html.TextBoxFor(model => model.Customer.Name, new { @class = "form-control"})
         </dd>
         <dt>
             @Html.DisplayNameFor(model => model.Payment.CreditCard.CardNumber)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Payment.CreditCard.CardNumber)
+            @Html.TextBoxFor(model => model.Payment.CreditCard.CardNumber, new { @class = "form-control"})
         </dd>
         <dt>
             @Html.DisplayNameFor(model => model.Payment.CreditCard.Holder)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Payment.CreditCard.Holder)
+            @Html.TextBoxFor(model => model.Payment.CreditCard.Holder, new { @class = "form-control" })
         </dd>
         <dt>
             @Html.DisplayNameFor(model => model.Payment.CreditCard.Brand)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Payment.CreditCard.Brand)
+            @Html.TextBoxFor(model => model.Payment.CreditCard.Brand, new { @class = "form-control" })
         </dd>
         <dt>
             @Html.DisplayNameFor(model => model.Payment.CreditCard.ExpirationDate)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Payment.CreditCard.ExpirationDate)
+            @Html.TextBoxFor(model => model.Payment.CreditCard.ExpirationDate, new { @class = "form-control" })
         </dd>
         <dt>
             @Html.DisplayNameFor(model => model.Payment.Provider)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Payment.Provider)
+            @Html.TextBoxFor(model => model.Payment.Provider, new { @class = "form-control" })
         </dd>
         <dt>
             @Html.DisplayNameFor(model => model.Payment.Type)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Payment.Type)
+            @Html.TextBoxFor(model => model.Payment.Type, new { @class = "form-control" })
         </dd>
         <dt>
             @Html.DisplayNameFor(model => model.Payment.Amount)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Payment.Amount)
+            @Html.TextBoxFor(model => model.Payment.Amount, new { @class = "form-control" })
         </dd>
         <dt>
             @Html.DisplayNameFor(model => model.Payment.Installments)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Payment.Installments)
+            @Html.TextBoxFor(model => model.Payment.Installments, new { @class = "form-control" })
         </dd>
         <dt>
             @Html.DisplayNameFor(model => model.Payment.ProofOfSale)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Payment.ProofOfSale)
+            @Html.TextBoxFor(model => model.Payment.ProofOfSale, new { @class = "form-control" })
         </dd>
     </dl>
 </div>

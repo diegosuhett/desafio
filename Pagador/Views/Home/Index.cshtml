@@ -3,7 +3,7 @@
 
 @model IEnumerable<Pagador.Models.Pedido>
 @{
-    ViewData["Title"] = "Pedidos";
+    ViewData["Title"] = "Visão Geral";
 }
 <form method="post">
     <div class="container">
@@ -55,5 +55,5 @@
 <h1></h1>
 <h1></h1>
 <form asp-controller="Transacao" asp-action="Incluir" method="get">
-    <button type="submit" class="btn btn-primary">Novo Pedido</button>
+    <button type="submit" class="btn btn-primary center-block">Novo Pedido</button>
 </form>

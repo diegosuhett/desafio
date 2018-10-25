@@ -12435,11 +12435,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Repository\\desafio\\Pagador\\Pagador\\Pagador.csproj",
+      "projectUniqueName": "C:\\Users\\Diego\\Desktop\\desafio\\Pagador\\Pagador.csproj",
       "projectName": "Pagador",
-      "projectPath": "D:\\Repository\\desafio\\Pagador\\Pagador\\Pagador.csproj",
+      "projectPath": "C:\\Users\\Diego\\Desktop\\desafio\\Pagador\\Pagador.csproj",
       "packagesPath": "C:\\Users\\Diego\\.nuget\\packages\\",
-      "outputPath": "D:\\Repository\\desafio\\Pagador\\Pagador\\obj\\",
+      "outputPath": "C:\\Users\\Diego\\Desktop\\desafio\\Pagador\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
