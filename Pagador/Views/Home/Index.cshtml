@@ -1,0 +1,59 @@
+﻿@using System
+@using Pagador.Models.Descricao
+
+@model IEnumerable<Pagador.Models.Pedido>
+@{
+    ViewData["Title"] = "Pedidos";
+}
+<form method="post">
+    <div class="container">
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Data do Recebimento</th>
+                        <th scope="col">Tipo</th>
+                        <th scope="col">Valor</th>
+                        <th scope="col">Número de Parcelas</th>
+                        <th scope="col">Status do pedido</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                    <tr>
+                        <td>
+                            @item.Payment.ReceivedDate
+                        </td>
+                        <td>
+                            @item.Payment.Type
+                        </td>
+                        <td>
+                            @item.Payment.Amount
+                        </td>
+                        <td>
+                            @item.Payment.Installments
+                        </td>
+                        <td>
+                            @(Enum.GetName(typeof(TipoTransacao), item.Payment.Status))
+                        </td>
+                        <td>
+                            <button type="submit" class="btn btn-info" asp-controller="Transacao" asp-action="InfoPedido" asp-route-payId=@item.Payment.PaymentId>Consultar</button>
+                        </td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</form>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<form asp-controller="Transacao" asp-action="Incluir" method="get">
+    <button type="submit" class="btn btn-primary">Novo Pedido</button>
+</form>

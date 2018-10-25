@@ -1,0 +1,88 @@
+﻿@model Pagador.Models.Pedido
+
+@{
+    ViewData["Title"] = "InfoPedido1";
+}
+
+<h2>Número do Pedido: @Html.DisplayFor(model => model.Payment.PaymentId)</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Customer.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Customer.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Payment.CreditCard.CardNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Payment.CreditCard.CardNumber)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Payment.CreditCard.Holder)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Payment.CreditCard.Holder)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Payment.CreditCard.Brand)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Payment.CreditCard.Brand)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Payment.CreditCard.ExpirationDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Payment.CreditCard.ExpirationDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Payment.Provider)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Payment.Provider)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Payment.Type)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Payment.Type)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Payment.Amount)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Payment.Amount)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Payment.Installments)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Payment.Installments)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Payment.ProofOfSale)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Payment.ProofOfSale)
+        </dd>
+    </dl>
+</div>
+
+<form method="post">
+    <input asp-for="Payment.PaymentId" type="hidden" />
+
+    @if (Model.Payment.Status == 1)
+    {
+        <button type="submit" class="btn btn-primary" asp-controller="Transacao" asp-action="Capturar">Capturar pedido</button>
+    }
+    @if (Model.Payment.Status == 1 || Model.Payment.Status == 2)
+    {
+        <button type="submit" class="btn btn-primary" asp-controller="Transacao" asp-action="Cancelar">Cancelar pedido</button>
+    }
+
+    <a class="btn btn-primary" asp-controller="Home" asp-action="Index">Voltar</a>
+</form>

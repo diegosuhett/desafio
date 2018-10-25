@@ -1,0 +1,79 @@
+﻿@using Pagador.Models.Decricao
+
+@model Pagador.Models.Pedido
+@{
+    ViewData["Title"] = "Incluir Pedido";
+}
+
+<form asp-controller="Transacao" asp-action="Incluir" method="POST">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="form-group">
+                <label asp-for="MerchantOrderId"></label>
+                <input class="form-control" asp-for="MerchantOrderId" value="@ViewBag.MerchantOrderId" readonly>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Payment.Provider"></label>
+                <input class="form-control" asp-for="Payment.Provider" value="Simulado" readonly>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Payment.Type"></label>
+                <input class="form-control" asp-for="Payment.Type" value="CreditCard" readonly>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Customer.Name" class="control-label"></label>
+                <input asp-for="Customer.Name" class="form-control" />
+                <span asp-validation-for="Customer.Name" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+            <label asp-for="Payment.CreditCard.Brand" class="control-label"></label>
+            <select class="form-control" asp-for="Payment.CreditCard.Brand" asp-items="Html.GetEnumSelectList<BandeiraCartao>()"></select>
+            <span asp-validation-for="Payment.CreditCard.Brand" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Payment.CreditCard.CardNumber" class="control-label"></label>
+                <input asp-for="Payment.CreditCard.CardNumber" class="form-control" />
+                <span asp-validation-for="Payment.CreditCard.CardNumber" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Payment.CreditCard.SecurityCode" class="control-label"></label>
+                <input asp-for="Payment.CreditCard.SecurityCode" class="form-control" />
+                <span asp-validation-for="Payment.CreditCard.SecurityCode" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Payment.CreditCard.Holder" class="control-label"></label>
+                <input asp-for="Payment.CreditCard.Holder" class="form-control" />
+                <span asp-validation-for="Payment.CreditCard.Holder" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Payment.CreditCard.ExpirationDate" class="control-label"></label>
+                <input asp-for="Payment.CreditCard.ExpirationDate" class="form-control" />
+                <span asp-validation-for="Payment.CreditCard.ExpirationDate" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Payment.Amount" class="control-label"></label>
+                <input asp-for="Payment.Amount" class="form-control" value="0" />
+                <span asp-validation-for="Payment.Amount" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Payment.Installments" class="control-label"></label>
+                <input asp-for="Payment.Installments" class="form-control" value="0" />
+                <span asp-validation-for="Payment.Installments" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Incluir</button>
+    <a class="btn btn-primary" asp-controller="Home" asp-action="Index">Voltar</a>
+</form>
