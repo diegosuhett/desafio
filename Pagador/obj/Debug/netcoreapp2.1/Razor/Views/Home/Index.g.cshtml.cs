@@ -77,7 +77,7 @@ using Pagador.Models.Descricao;
 #line default
 #line hidden
             BeginContext(140, 1631, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "16eb2593fe354ebc9a117490e0976e6a", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e88a02f58bf2443cb3479cdbfc3e2a91", async() => {
                 BeginContext(160, 532, true);
                 WriteLiteral(@"
     <div class=""container"">
@@ -155,7 +155,7 @@ using Pagador.Models.Descricao;
                 WriteLiteral("\r\n                        </td>\r\n                        <td>\r\n                            ");
                 EndContext();
                 BeginContext(1453, 152, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("button", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dda8ef28e5a54547b07380d530a04464", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("button", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bb382468694a4fc19ee7e71157ea02d7", async() => {
                     BeginContext(1587, 9, true);
                     WriteLiteral("Consultar");
                     EndContext();
@@ -221,7 +221,7 @@ using Pagador.Models.Descricao;
             WriteLiteral("\r\n<h1></h1>\r\n<h1></h1>\r\n<h1></h1>\r\n<h1></h1>\r\n<h1></h1>\r\n<h1></h1>\r\n<h1></h1>\r\n");
             EndContext();
             BeginContext(1850, 161, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f138d2ee77384b51ae90c96651fd3296", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "57640d4e593c4043a437ba7ecc9de6f1", async() => {
                 BeginContext(1917, 87, true);
                 WriteLiteral("\r\n    <button type=\"submit\" class=\"btn btn-primary center-block\">Novo Pedido</button>\r\n");
                 EndContext();

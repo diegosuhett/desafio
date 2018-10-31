@@ -1,5 +1,4 @@
 ﻿using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -53,8 +52,6 @@ namespace Pagador.Models
         public string ProviderReturnMessage { get; set; }
 
         public CreditCard CreditCard { get; set; }
-
-        public List<Link> Links { get; set; }
 
         public List<Payment> Payments { get; set; }        
     }
